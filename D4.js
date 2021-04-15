@@ -117,7 +117,10 @@ HINT: Module Operator
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
-const reverseString()
+;(function(){
+const reverseString = str => str.split("").reverse().join("")
+console.log( "\nreverseString ---> " + reverseString("reverseString") )
+})()
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 8
