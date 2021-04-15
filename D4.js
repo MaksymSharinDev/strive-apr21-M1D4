@@ -112,7 +112,6 @@ HINT: Module Operator
     let number = randMinMax(-10,20) ;
     console.log( randMinMax(-10,20) );
     })()
-/* WRITE YOUR CODE HERE */
 
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
@@ -121,14 +120,20 @@ Write a function "reverseString" to programmatically reverse a given string (es.
 const reverseString = str => str.split("").reverse().join("")
 console.log( "\nreverseString ---> " + reverseString("reverseString") )
 })()
-/* WRITE YOUR CODE HERE */
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
-
-/* WRITE YOUR CODE HERE */
-
+;(function(){
+    const upperFirst = (str) => {
+        let tmp = str.split(" ")
+        tmp.forEach( ( astr , i , a ) => {
+            a[i] = astr.charAt(0).toUpperCase() + astr.slice(1) 
+        }) 
+        return tmp.join(" ")
+    }
+    console.log( "\nhey i need to be capitalized: ", upperFirst( " hey i need to be capitalized") )
+})()
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
