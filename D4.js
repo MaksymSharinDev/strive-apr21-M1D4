@@ -6,6 +6,9 @@ ASSIGNMENT RULES
 - You can Google / use StackOverflow BUT we suggest you to use just the material provided
 */
 
+//I trying TDD Approach and minimal code writing for raise the challenge level 
+
+
 const randMinMax = function(min,max){ return Math.floor(Math.random() * (max - min)) + min; }
 
 /* EXERCISE 1
@@ -58,17 +61,37 @@ Write a function "boundary" which accept an integer n and returns true if n is w
 */
 ;(function(){
     const boundary= (int) => ((int >= 20) && (int <= 100)) || ( int===400 )
-    let n = randMinMax(-10,10)
-    console.log (``)
+    let n = randMinMax(-10,19) ;
+    console.log (`boundary: ${boundary(n)} with INT ${n} `) 
+     n = randMinMax(101,111) ;
+    console.log (`boundary: ${boundary(n)} with INT ${n} `) 
+     n = 400
+    console.log (`boundary: ${boundary(n)} with INT ${n} `) 
+    n = randMinMax(101,111) ;
+    console.log (`boundary: ${boundary(n)} with INT ${n} `) 
+    n = randMinMax(21,99) ;
+    console.log (`boundary: ${boundary(n)} with INT ${n} `) 
+    n = 20 ;
+    console.log (`boundary: ${boundary(n)} with INT ${n} `) 
+    n = 100 ;
+    console.log (`boundary: ${boundary(n)} with INT ${n} `) 
+
+
 })()
 
-/* WRITE YOUR CODE HERE */
 
 /* EXERCISE 5
 Write a function "strivify" which accepts a string.
 It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
+;(function(){
 
+const strivify = word => word.startsWith("Strive") ? word : "Strive" + word
+let testString1 = "text" 
+console.log (`\nargument: ${testString1} \nstrivifyOutput: ${strivify(testString1)} `) 
+let testString2 = "StriveAnotherText"
+console.log (`argument: ${testString2} \nstrivifyOutput: ${strivify(testString2)} `) 
+})()
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 6
